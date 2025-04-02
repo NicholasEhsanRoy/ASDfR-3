@@ -1,0 +1,4 @@
+source;share/colour_segmenter/local_setup.bash
+source;share/colour_segmenter/local_setup.dsv
+source;share/colour_segmenter/local_setup.sh
+source;share/colour_segmenter/local_setup.zsh

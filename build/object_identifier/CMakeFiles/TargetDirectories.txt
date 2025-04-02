@@ -1,0 +1,11 @@
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/uninstall.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/object_identifier_uninstall.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/object_identifier.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/object_identifier_node.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/test.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/edit_cache.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/list_install_components.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/install.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/install/local.dir
+/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier/CMakeFiles/install/strip.dir
