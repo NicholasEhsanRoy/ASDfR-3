@@ -1,0 +1,3 @@
+source;share/colour_segmenter/environment/ament_prefix_path.sh
+source;share/colour_segmenter/environment/library_path.sh
+source;share/colour_segmenter/environment/path.sh
