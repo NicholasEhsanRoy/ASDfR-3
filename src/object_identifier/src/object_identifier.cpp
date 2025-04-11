@@ -26,15 +26,37 @@ namespace object_identifier {
 
         return outputImage;
     }
+    
+    double ObjectIdentifier :: calculate_radius(const cv::Mat &binary_image, const std::tuple<int, int> &center) {
+        int x_center = std::get<0>(center);
+        int y_center = std::get<1>(center);
+
+        if (x_center == -1 || y_center == -1) {
+            return -1.0; // Invalid center
+        }
+
+        double max_distance = 0.0;
+
+        for (int y = 0; y < binary_image.rows; ++y) {
+            for (int x = 0; x < binary_image.cols; ++x) {
+                if (binary_image.at<uchar>(y, x) > 0) {
+                    double dist = std::hypot(x - x_center, y - y_center);
+                    if (dist > max_distance) {
+                        max_distance = dist;
+                    }
+                }
+            }
+        }
+
+        return max_distance;
+    }
+
 
     void ObjectIdentifier::initialize() {
         auto qos = rclcpp::QoS(depth_);
         history_ == "keep_all" ? qos.keep_all() : qos.keep_last(depth_);
 
-        pub_ = this->create_publisher<sensor_msgs::msg::Image>("object_position", qos);
-        frame_size_publisher_ = this->create_publisher<geometry_msgs::msg::Vector3>("frame_size", 10);
-        frame_width_ = 0;
-        frame_height_ = 0;
+        pub_ = this->create_publisher<asdfr_msgs::msg::IdentifiedObject>("object_position", qos);
         auto image_callback = [this](sensor_msgs::msg::Image::ConstSharedPtr msg) -> void {
             cv_bridge::CvImagePtr cv_ptr;
             try {
@@ -44,36 +66,28 @@ namespace object_identifier {
                 return;
             }
 
-            frame_width_ = cv_ptr->image.cols;
-            frame_height_ =  cv_ptr->image.rows;
-
             std::tuple<int, int> location = this->find_center_of_gravity(cv_ptr->image);
-            cv::Mat padded_image = this->padImage(cv_ptr->image, 320, location);
+            int x_center = std::get<0>(location);
+            int y_center = std::get<1>(location);
+            double radius = calculate_radius(cv_ptr->image, location);
+            RCLCPP_INFO(this->get_logger(), "found center x = %.2f \t y = %.2f \t r = %.2f", static_cast<double>(std::get<0>(location)), static_cast<double>(std::get<1>(location)), radius);
+            auto message = asdfr_msgs::msg::IdentifiedObject();
+            message.x = x_center;     
+            message.y = y_center;     
+            message.r = radius;
 
-
-            RCLCPP_INFO(this->get_logger(), "Publishing image_location x = %.2f \t y = %.2f", static_cast<double>(std::get<0>(location)), static_cast<double>(std::get<1>(location)));
-            cv_bridge::CvImage color_mask_msg;
-            color_mask_msg.header = msg->header;
-            color_mask_msg.encoding = sensor_msgs::image_encodings::MONO8;
-            color_mask_msg.image = padded_image;
-            pub_->publish(*color_mask_msg.toImageMsg());
-
-            cv::Mat color_image; // to see the dran on circle
+            pub_->publish(message);
+            cv::Mat color_image;
             cv::cvtColor(cv_ptr->image, color_image, cv::COLOR_GRAY2BGR);
-            cv::circle(color_image, cv::Point(std::get<0>(location) , std::get<1>(location)), 5, cv::Scalar(0, 255, 0), -1);
+            if (x_center != -1 && y_center != -1) {
+                cv::circle(color_image, cv::Point(x_center, y_center), 5, cv::Scalar(0, 255, 0), -1);
+                cv::circle(color_image, cv::Point(x_center, y_center), static_cast<int>(radius), cv::Scalar(0, 255, 0), 2);
+            }
             cv::imshow("Detected Object on /bw_image", color_image);
             cv::waitKey(1);
         };
         sub_ = create_subscription<sensor_msgs::msg::Image>("bw_image", qos, image_callback);
 
-    }
-
-    void ObjectIdentifier::publish_frame_size() {
-        geometry_msgs::msg::Vector3 frame_size_msg;
-        frame_size_msg.x = frame_width_;
-        frame_size_msg.y = frame_height_;
-        frame_size_msg.z = 0.0;
-        frame_size_publisher_->publish(frame_size_msg);
     }
 
     void ObjectIdentifier::parse_parameters() {

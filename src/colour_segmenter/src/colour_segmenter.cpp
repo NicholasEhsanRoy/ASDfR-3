@@ -41,7 +41,6 @@ namespace colour_segmenter
         // Initialize variables for best circular object
         double bestCircularity = 0.0;
         int bestContourIndex = -1;
-        double maxArea = 0.0;
 
         // Loop through all contours
         for (size_t i = 0; i < contours.size(); i++) {
@@ -59,30 +58,19 @@ namespace colour_segmenter
             // Compute circularity: Actual Area / Enclosing Circle Area
             double circularity = area / circleArea;
 
-            // Get bounding box aspect ratio
-            // cv::Rect bbox = cv::boundingRect(contours[i]);
-            // double aspectRatio = (double)bbox.width / (double)bbox.height;
-            // if (aspectRatio < 0.5 || aspectRatio > 2.0) {
-            //     // Likely a stretched shape (e.g., LAN cable), so ignore
-            //     continue;
-            // }
-
             // Update best circular object if circularity is highest
             if (circularity > bestCircularity && circularity > 0.5) {
                 bestCircularity = circularity;
                 bestContourIndex = i;
-                maxArea = area;
             }
         }
 
         // Create a mask for the best circular object
         cv::Mat circularObjectMask = cv::Mat::zeros(color_mask.size(), CV_8UC1);
-        bool isCircular = false;
 
         if (bestContourIndex != -1) {
             // Draw the best circular object
             cv::drawContours(circularObjectMask, contours, bestContourIndex, cv::Scalar(255), cv::FILLED);
-            isCircular = true;
         }
 
         // Apply the mask to keep only the best circular object

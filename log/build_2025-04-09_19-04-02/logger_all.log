@@ -1,0 +1,502 @@
+[0.086s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.086s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7d2d0217a0f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7d2d02292270>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7d2d02292270>>, mixin_verb=('build',))
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.115s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.115s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.115s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.115s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.116s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/ASDFR/ASDfR-3'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/asdfr_msgs) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/asdfr_msgs' with type 'ros.catkin' and name 'asdfr_msgs'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/cam2image_vm2ros) by extension 'ros'
+[0.163s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cam2image_vm2ros' with type 'ros.ament_cmake' and name 'cam2image_vm2ros'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/colour_segmenter) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'src/colour_segmenter' with type 'ros.ament_cmake' and name 'colour_segmenter'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/object_identifier) by extension 'ros'
+[0.172s] DEBUG:colcon.colcon_core.package_identification:Package 'src/object_identifier' with type 'ros.ament_cmake' and name 'object_identifier'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(src/rebot_simulator) by extension 'ros'
+[0.176s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rebot_simulator' with type 'ros.ament_cmake' and name 'relbot_simulator'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_node) by extension 'ros'
+[0.180s] DEBUG:colcon.colcon_core.package_identification:Package 'src/test_node' with type 'ros.ament_cmake' and name 'test_node'
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.194s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.194s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.210s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/ubuntu/ASDFR/ASDfR-3/install
+[0.211s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 334 installed packages in /opt/ros/jazzy
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'asdfr_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'asdfr_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs', 'merge_install': False, 'path': '/home/ubuntu/ASDFR/ASDfR-3/src/asdfr_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'cam2image_vm2ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'cam2image_vm2ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros', 'merge_install': False, 'path': '/home/ubuntu/ASDFR/ASDfR-3/src/cam2image_vm2ros', 'symlink_install': False, 'test_result_base': None}
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'colour_segmenter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'colour_segmenter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter', 'merge_install': False, 'path': '/home/ubuntu/ASDFR/ASDfR-3/src/colour_segmenter', 'symlink_install': False, 'test_result_base': None}
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'relbot_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.255s] DEBUG:colcon.colcon_core.verb:Building package 'relbot_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator', 'merge_install': False, 'path': '/home/ubuntu/ASDFR/ASDfR-3/src/rebot_simulator', 'symlink_install': False, 'test_result_base': None}
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'cmake_args' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'cmake_target' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'test_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.255s] DEBUG:colcon.colcon_core.verb:Building package 'test_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ASDFR/ASDfR-3/build/test_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ASDFR/ASDfR-3/install/test_node', 'merge_install': False, 'path': '/home/ubuntu/ASDFR/ASDfR-3/src/test_node', 'symlink_install': False, 'test_result_base': None}
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'cmake_args' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'cmake_target' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'cmake_clean_cache' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'cmake_clean_first' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'cmake_force_configure' from command line to 'False'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'ament_cmake_args' from command line to 'None'
+[0.255s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'catkin_cmake_args' from command line to 'None'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'object_identifier' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.256s] DEBUG:colcon.colcon_core.verb:Building package 'object_identifier' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier', 'merge_install': False, 'path': '/home/ubuntu/ASDFR/ASDfR-3/src/object_identifier', 'symlink_install': False, 'test_result_base': None}
+[0.256s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.256s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.257s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/ubuntu/ASDFR/ASDfR-3/src/asdfr_msgs' with build type 'catkin'
+[0.257s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ASDFR/ASDfR-3/src/asdfr_msgs'
+[0.258s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.258s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.259s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.274s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/ASDFR/ASDfR-3/src/cam2image_vm2ros' with build type 'ament_cmake'
+[0.274s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ASDFR/ASDfR-3/src/cam2image_vm2ros'
+[0.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.275s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.289s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/ASDFR/ASDfR-3/src/colour_segmenter' with build type 'ament_cmake'
+[0.290s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ASDFR/ASDfR-3/src/colour_segmenter'
+[0.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.309s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/ASDFR/ASDfR-3/src/rebot_simulator' with build type 'ament_cmake'
+[0.310s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ASDFR/ASDfR-3/src/rebot_simulator'
+[0.310s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.310s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs': /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs -- -j4 -l4
+[0.351s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros -- -j4 -l4
+[0.363s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter -- -j4 -l4
+[0.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator -- -j4 -l4
+[1.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros -- -j4 -l4
+[1.116s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros
+[1.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator -- -j4 -l4
+[1.123s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator
+[1.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter -- -j4 -l4
+[1.128s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter
+[1.293s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cam2image_vm2ros)
+[1.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/cam2image_vm2ros
+[1.297s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros' for CMake module files
+[1.307s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros' for CMake config files
+[1.314s] Level 1:colcon.colcon_core.shell:create_environment_hook('cam2image_vm2ros', 'cmake_prefix_path')
+[1.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/cmake_prefix_path.ps1'
+[1.317s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/cmake_prefix_path.dsv'
+[1.319s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/cmake_prefix_path.sh'
+[1.324s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib'
+[1.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('cam2image_vm2ros', 'ld_library_path_lib')
+[1.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/ld_library_path_lib.ps1'
+[1.327s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/ld_library_path_lib.dsv'
+[1.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/ld_library_path_lib.sh'
+[1.333s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/bin'
+[1.335s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib/pkgconfig/cam2image_vm2ros.pc'
+[1.336s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib/python3.12/site-packages'
+[1.336s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/bin'
+[1.337s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.ps1'
+[1.340s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.dsv'
+[1.345s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.sh'
+[1.346s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.bash'
+[1.348s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.zsh'
+[1.350s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/colcon-core/packages/cam2image_vm2ros)
+[1.355s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cam2image_vm2ros)
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros' for CMake module files
+[1.366s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros' for CMake config files
+[1.373s] Level 1:colcon.colcon_core.shell:create_environment_hook('cam2image_vm2ros', 'cmake_prefix_path')
+[1.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/cmake_prefix_path.ps1'
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/cmake_prefix_path.dsv'
+[1.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/cmake_prefix_path.sh'
+[1.379s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib'
+[1.381s] Level 1:colcon.colcon_core.shell:create_environment_hook('cam2image_vm2ros', 'ld_library_path_lib')
+[1.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/ld_library_path_lib.ps1'
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/ld_library_path_lib.dsv'
+[1.386s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/hook/ld_library_path_lib.sh'
+[1.388s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/bin'
+[1.389s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib/pkgconfig/cam2image_vm2ros.pc'
+[1.389s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib/python3.12/site-packages'
+[1.389s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/bin'
+[1.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.ps1'
+[1.392s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.dsv'
+[1.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.sh'
+[1.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.bash'
+[1.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/cam2image_vm2ros/package.zsh'
+[1.396s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/share/colcon-core/packages/cam2image_vm2ros)
+[1.397s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/ASDFR/ASDfR-3/src/test_node' with build type 'ament_cmake'
+[1.397s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ASDFR/ASDfR-3/src/test_node'
+[1.397s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.398s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.437s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(colour_segmenter)
+[1.437s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter' for CMake module files
+[1.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter
+[1.447s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter' for CMake config files
+[1.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('colour_segmenter', 'cmake_prefix_path')
+[1.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/cmake_prefix_path.ps1'
+[1.456s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/cmake_prefix_path.dsv'
+[1.458s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/cmake_prefix_path.sh'
+[1.461s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib'
+[1.462s] Level 1:colcon.colcon_core.shell:create_environment_hook('colour_segmenter', 'ld_library_path_lib')
+[1.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/ld_library_path_lib.ps1'
+[1.464s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/ld_library_path_lib.dsv'
+[1.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/ld_library_path_lib.sh'
+[1.469s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/bin'
+[1.469s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib/pkgconfig/colour_segmenter.pc'
+[1.470s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib/python3.12/site-packages'
+[1.472s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/bin'
+[1.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.ps1'
+[1.474s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.dsv'
+[1.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.sh'
+[1.479s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.bash'
+[1.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.zsh'
+[1.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colcon-core/packages/colour_segmenter)
+[1.493s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(colour_segmenter)
+[1.493s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter' for CMake module files
+[1.510s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter' for CMake config files
+[1.516s] Level 1:colcon.colcon_core.shell:create_environment_hook('colour_segmenter', 'cmake_prefix_path')
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/cmake_prefix_path.ps1'
+[1.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/cmake_prefix_path.dsv'
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/cmake_prefix_path.sh'
+[1.523s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib'
+[1.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('colour_segmenter', 'ld_library_path_lib')
+[1.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/ld_library_path_lib.ps1'
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/ld_library_path_lib.dsv'
+[1.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/hook/ld_library_path_lib.sh'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/bin'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib/pkgconfig/colour_segmenter.pc'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib/python3.12/site-packages'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/bin'
+[1.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.ps1'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.dsv'
+[1.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.sh'
+[1.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.bash'
+[1.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colour_segmenter/package.zsh'
+[1.539s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/share/colcon-core/packages/colour_segmenter)
+[1.540s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(relbot_simulator)
+[1.541s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator' for CMake module files
+[1.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/relbot_simulator
+[1.549s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator' for CMake config files
+[1.557s] Level 1:colcon.colcon_core.shell:create_environment_hook('relbot_simulator', 'cmake_prefix_path')
+[1.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/hook/cmake_prefix_path.ps1'
+[1.559s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/hook/cmake_prefix_path.dsv'
+[1.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/hook/cmake_prefix_path.sh'
+[1.563s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/lib'
+[1.564s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/bin'
+[1.564s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/lib/pkgconfig/relbot_simulator.pc'
+[1.565s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/lib/python3.12/site-packages'
+[1.565s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/bin'
+[1.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.ps1'
+[1.567s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.dsv'
+[1.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.sh'
+[1.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.bash'
+[1.571s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.zsh'
+[1.573s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/colcon-core/packages/relbot_simulator)
+[1.578s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(relbot_simulator)
+[1.578s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator' for CMake module files
+[1.590s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator' for CMake config files
+[1.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('relbot_simulator', 'cmake_prefix_path')
+[1.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/hook/cmake_prefix_path.ps1'
+[1.597s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/hook/cmake_prefix_path.dsv'
+[1.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/hook/cmake_prefix_path.sh'
+[1.602s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/lib'
+[1.603s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/bin'
+[1.604s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/lib/pkgconfig/relbot_simulator.pc'
+[1.604s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/lib/python3.12/site-packages'
+[1.604s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/bin'
+[1.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.ps1'
+[1.606s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.dsv'
+[1.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.sh'
+[1.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.bash'
+[1.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/relbot_simulator/package.zsh'
+[1.611s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator/share/colcon-core/packages/relbot_simulator)
+[1.628s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/test_node': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/test_node -- -j4 -l4
+[2.501s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs' returned '0': /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs -- -j4 -l4
+[2.509s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs': /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs
+[2.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs' returned '0': /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs
+[2.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('asdfr_msgs', 'ros_package_path')
+[2.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/ros_package_path.ps1'
+[2.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/ros_package_path.dsv'
+[2.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/ros_package_path.sh'
+[2.798s] Level 1:colcon.colcon_ros.task.catkin:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib/python3.12/site-packages'
+[2.798s] Level 1:colcon.colcon_core.shell:create_environment_hook('asdfr_msgs', 'catkin_pythonpath')
+[2.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/catkin_pythonpath.ps1'
+[2.799s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/catkin_pythonpath.dsv'
+[2.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/catkin_pythonpath.sh'
+[2.802s] Level 1:colcon.colcon_core.shell:create_environment_hook('asdfr_msgs', 'pkg_config_path')
+[2.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pkg_config_path.ps1'
+[2.803s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pkg_config_path.dsv'
+[2.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pkg_config_path.sh'
+[2.811s] Level 1:colcon.colcon_core.shell:create_environment_hook('asdfr_msgs', 'pkg_config_path_multiarch')
+[2.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pkg_config_path_multiarch.ps1'
+[2.813s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pkg_config_path_multiarch.dsv'
+[2.814s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pkg_config_path_multiarch.sh'
+[2.817s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(asdfr_msgs)
+[2.817s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs' for CMake module files
+[2.828s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs' for CMake config files
+[2.834s] Level 1:colcon.colcon_core.shell:create_environment_hook('asdfr_msgs', 'cmake_prefix_path')
+[2.835s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/cmake_prefix_path.ps1'
+[2.836s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/cmake_prefix_path.dsv'
+[2.838s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/cmake_prefix_path.sh'
+[2.840s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib'
+[2.841s] Level 1:colcon.colcon_core.shell:create_environment_hook('asdfr_msgs', 'ld_library_path_lib')
+[2.842s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/ld_library_path_lib.ps1'
+[2.843s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/ld_library_path_lib.dsv'
+[2.844s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/ld_library_path_lib.sh'
+[2.845s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/bin'
+[2.846s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib/pkgconfig/asdfr_msgs.pc'
+[2.846s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib/python3.12/site-packages'
+[2.846s] Level 1:colcon.colcon_core.shell:create_environment_hook('asdfr_msgs', 'pythonpath')
+[2.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pythonpath.ps1'
+[2.848s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pythonpath.dsv'
+[2.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/hook/pythonpath.sh'
+[2.852s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/bin'
+[2.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/package.ps1'
+[2.854s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/package.dsv'
+[2.856s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/package.sh'
+[2.858s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/package.bash'
+[2.859s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/asdfr_msgs/package.zsh'
+[2.860s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/share/colcon-core/packages/asdfr_msgs)
+[2.861s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/ASDFR/ASDfR-3/src/object_identifier' with build type 'ament_cmake'
+[2.861s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/ASDFR/ASDfR-3/src/object_identifier'
+[2.862s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.862s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.912s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier': CMAKE_PREFIX_PATH=/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib:/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/object_identifier -- -j4 -l4
+[3.318s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib:/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/object_identifier -- -j4 -l4
+[3.323s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier': CMAKE_PREFIX_PATH=/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib:/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/object_identifier
+[3.427s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(object_identifier)
+[3.427s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier' for CMake module files
+[3.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/object_identifier' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor LD_LIBRARY_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/lib:/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter/lib:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/object_identifier
+[3.434s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier' for CMake config files
+[3.439s] Level 1:colcon.colcon_core.shell:create_environment_hook('object_identifier', 'cmake_prefix_path')
+[3.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/cmake_prefix_path.ps1'
+[3.441s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/cmake_prefix_path.dsv'
+[3.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/cmake_prefix_path.sh'
+[3.445s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib'
+[3.445s] Level 1:colcon.colcon_core.shell:create_environment_hook('object_identifier', 'ld_library_path_lib')
+[3.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/ld_library_path_lib.ps1'
+[3.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/ld_library_path_lib.dsv'
+[3.448s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/ld_library_path_lib.sh'
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/bin'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib/pkgconfig/object_identifier.pc'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib/python3.12/site-packages'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/bin'
+[3.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.ps1'
+[3.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.dsv'
+[3.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.sh'
+[3.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.bash'
+[3.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.zsh'
+[3.456s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/colcon-core/packages/object_identifier)
+[3.460s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(object_identifier)
+[3.460s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier' for CMake module files
+[3.467s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier' for CMake config files
+[3.471s] Level 1:colcon.colcon_core.shell:create_environment_hook('object_identifier', 'cmake_prefix_path')
+[3.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/cmake_prefix_path.ps1'
+[3.473s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/cmake_prefix_path.dsv'
+[3.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/cmake_prefix_path.sh'
+[3.476s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib'
+[3.477s] Level 1:colcon.colcon_core.shell:create_environment_hook('object_identifier', 'ld_library_path_lib')
+[3.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/ld_library_path_lib.ps1'
+[3.478s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/ld_library_path_lib.dsv'
+[3.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/hook/ld_library_path_lib.sh'
+[3.480s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/bin'
+[3.481s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib/pkgconfig/object_identifier.pc'
+[3.481s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/lib/python3.12/site-packages'
+[3.481s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/bin'
+[3.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.ps1'
+[3.484s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.dsv'
+[3.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.sh'
+[3.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.bash'
+[3.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/object_identifier/package.zsh'
+[3.498s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier/share/colcon-core/packages/object_identifier)
+[13.197s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/test_node' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/test_node -- -j4 -l4
+[13.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/test_node': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/test_node
+[13.331s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_node)
+[13.332s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node' for CMake module files
+[13.332s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/test_node' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ASDFR/ASDfR-3/install/test_node:/home/ubuntu/ASDFR/ASDfR-3/install/relbot_simulator:/home/ubuntu/ASDFR/ASDfR-3/install/object_identifier:/home/ubuntu/ASDFR/ASDfR-3/install/colour_segmenter:/home/ubuntu/ASDFR/ASDfR-3/install/cam2image_vm2ros:/opt/ros/jazzy:/home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/test_node
+[13.338s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node' for CMake config files
+[13.347s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_node', 'cmake_prefix_path')
+[13.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/cmake_prefix_path.ps1'
+[13.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/cmake_prefix_path.dsv'
+[13.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/cmake_prefix_path.sh'
+[13.353s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib'
+[13.354s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_node', 'ld_library_path_lib')
+[13.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/ld_library_path_lib.ps1'
+[13.355s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/ld_library_path_lib.dsv'
+[13.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/ld_library_path_lib.sh'
+[13.358s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/bin'
+[13.358s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib/pkgconfig/test_node.pc'
+[13.358s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib/python3.12/site-packages'
+[13.359s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/bin'
+[13.359s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.ps1'
+[13.361s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.dsv'
+[13.361s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.sh'
+[13.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.bash'
+[13.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.zsh'
+[13.364s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/colcon-core/packages/test_node)
+[13.367s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_node)
+[13.367s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node' for CMake module files
+[13.377s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node' for CMake config files
+[13.387s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_node', 'cmake_prefix_path')
+[13.387s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/cmake_prefix_path.ps1'
+[13.389s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/cmake_prefix_path.dsv'
+[13.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/cmake_prefix_path.sh'
+[13.393s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib'
+[13.393s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_node', 'ld_library_path_lib')
+[13.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/ld_library_path_lib.ps1'
+[13.395s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/ld_library_path_lib.dsv'
+[13.396s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/hook/ld_library_path_lib.sh'
+[13.397s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/bin'
+[13.397s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib/pkgconfig/test_node.pc'
+[13.397s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/lib/python3.12/site-packages'
+[13.397s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/bin'
+[13.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.ps1'
+[13.399s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.dsv'
+[13.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.sh'
+[13.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.bash'
+[13.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/test_node/package.zsh'
+[13.403s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/ASDFR/ASDfR-3/install/test_node/share/colcon-core/packages/test_node)
+[13.404s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.404s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.404s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.404s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.417s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[13.417s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.417s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.417s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.418s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[13.418s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.418s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ASDFR/ASDfR-3/install/local_setup.ps1'
+[13.420s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/ASDFR/ASDfR-3/install/_local_setup_util_ps1.py'
+[13.422s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ASDFR/ASDfR-3/install/setup.ps1'
+[13.433s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ASDFR/ASDfR-3/install/local_setup.sh'
+[13.435s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/ASDFR/ASDfR-3/install/_local_setup_util_sh.py'
+[13.437s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ASDFR/ASDfR-3/install/setup.sh'
+[13.447s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ASDFR/ASDfR-3/install/local_setup.bash'
+[13.450s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ASDFR/ASDfR-3/install/setup.bash'
+[13.464s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/ASDFR/ASDfR-3/install/local_setup.zsh'
+[13.465s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/ASDFR/ASDfR-3/install/setup.zsh'

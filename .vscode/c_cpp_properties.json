@@ -9,6 +9,8 @@
         "/opt/ros/jazzy/include/**",
         "/home/ubuntu/ASDFR/ASDfR-3/src/cam2image_vm2ros/include/**",
         "/home/ubuntu/ASDFR/ASDfR-3/src/object_identifier/include/**",
+        "install/asdfr_msgs/include/asdfr_msgs/asdfr_msgs/msg/identified_object.hpp",
+        "install/asdfr_msgs/include/",
         "/usr/include/**"
       ],
       "name": "ROS",

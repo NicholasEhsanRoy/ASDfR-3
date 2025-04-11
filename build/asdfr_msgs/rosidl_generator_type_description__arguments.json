@@ -1,0 +1,11 @@
+{
+  "package_name": "asdfr_msgs",
+  "output_dir": "/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs/rosidl_generator_type_description/asdfr_msgs",
+  "idl_tuples": [
+    "/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs/rosidl_adapter/asdfr_msgs:msg/IdentifiedObject.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

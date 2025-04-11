@@ -862,4 +862,10 @@ CMakeFiles/object_identifier.dir/src/object_identifier.cpp.o: \
  /usr/include/opencv4/opencv2/imgproc/types_c.h \
  /usr/include/opencv4/opencv2/core/core_c.h \
  /usr/include/opencv4/opencv2/core/types_c.h \
- /opt/ros/jazzy/include/cv_bridge/cv_bridge/cv_bridge_export.h
+ /opt/ros/jazzy/include/cv_bridge/cv_bridge/cv_bridge_export.h \
+ /home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/include/asdfr_msgs/asdfr_msgs/msg/identified_object.hpp \
+ /home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/include/asdfr_msgs/asdfr_msgs/msg/detail/identified_object__struct.hpp \
+ /home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/include/asdfr_msgs/asdfr_msgs/msg/detail/identified_object__builder.hpp \
+ /home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/include/asdfr_msgs/asdfr_msgs/msg/detail/identified_object__traits.hpp \
+ /home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/include/asdfr_msgs/asdfr_msgs/msg/detail/identified_object__type_support.hpp \
+ /home/ubuntu/ASDFR/ASDfR-3/install/asdfr_msgs/include/asdfr_msgs/asdfr_msgs/msg/rosidl_generator_cpp__visibility_control.hpp

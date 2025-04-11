@@ -86,15 +86,19 @@ runing the imageshow
 ros2 run image_tools showimage --ros-args -p depth:=1 -p history:=keep_last
 
 
+ssh -X asdfr-01@10.28.0.111
+
 ssh -X ubuntu@10.77.1.166
-cd ~/ASDFR/ASDFR-3
+cd ~/ASDFR/ASDfR-3
 source install/setup.bash
 
 ros2 run cam2image_vm2ros cam2image --ros-args --params-file src/cam2image_vm2ros/config/cam2image_relbot.yaml
+ros2 run cam2image_vm2ros cam2image --ros-args --params-file src/cam2image_vm2ros/config/cam2image.yaml
 
 ros2 run colour_segmenter colour_segment --ros-args --params-file src/colour_segmenter/config/colour_segmenter.yml
 
 ros2 run object_identifier object_identifier_node --ros-args --params-file src/object_identifier/config/object_identifier.yml
 
+ros2 run relbot_simulator relbot_simulator  --ros-args -p use_twist_cmd:=true
 
-
+ros2 run test_node test_node_exec 

@@ -1,0 +1,4 @@
+Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs': /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs -- -j4 -l4
+Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs' returned '0': /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs -- -j4 -l4
+Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs': /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs
+Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs' returned '0': /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs

@@ -1,4 +1,0 @@
-Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter -- -j4 -l4
-Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter -- -j4 -l4
-Invoking command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter
-Invoked command in '/home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ubuntu/ASDFR/ASDfR-3/build/colour_segmenter

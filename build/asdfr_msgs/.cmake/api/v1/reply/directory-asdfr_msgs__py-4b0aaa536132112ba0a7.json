@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "asdfr_msgs__py",
+		"source" : "/home/ubuntu/ASDFR/ASDfR-3/build/asdfr_msgs/asdfr_msgs__py"
+	}
+}
