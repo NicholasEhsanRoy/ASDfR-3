@@ -103,13 +103,17 @@ ros2 run relbot_simulator relbot_simulator  --ros-args -p use_twist_cmd:=true
 
 ros2 run test_node test_node_exec 
 
-
-
-## Controller is the executable
-sudo ./build/controller/controller
+## to build messages
+colcon build --packages-select xrf2_msgs
 
 ## To start the Ros-Xeno bridge
 ros2 run ros_xeno_bridge RosXenoBridge 
 
 ## To start the loop:
 ros2 topic pub --once /Command std_msgs/msg/Int32 "{data: 1}"
+
+## relbot_rt is the executable
+sudo ./build/RelbotRT/relbot_rt
+
+## to rebuild the executable
+colcon build --packages-select RelbotRT

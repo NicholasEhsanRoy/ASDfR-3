@@ -4,7 +4,7 @@
 #include <pthread.h>
 #include <fstream>
 
-#include "#include <iostream>
+#include <iostream>
 #include <string>
 #include <sys/types.h>
 #include <pthread.h>
@@ -16,7 +16,7 @@ volatile bool exitBool = false;
 
 static void *XenoThread(void *arg)
 {
-    Template example_rt(1000,1,1);
+    RelbotRT example_rt(1000,1,1);
     evl_printf("starting the loop!!!\n");
     example_rt.loop();
     return NULL;

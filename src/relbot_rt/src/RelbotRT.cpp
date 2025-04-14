@@ -41,7 +41,7 @@ int RelbotRT::initialised()
 
     monitor.printf("Hello from initialised\n");       // Do something
 
-    return 0;
+    return 1;
 }
 
 int RelbotRT::run()
@@ -52,9 +52,10 @@ int RelbotRT::run()
     // Start logger
     if(!logger.isStarted())
         logger.start();                             
-    
-    //  Change some data for logger 
-    monitor.printf("Hello from run\n");             
+    int32_t x = ros_data.x;
+    int32_t y = ros_data.y;
+    monitor.printf("Data: X:%d, Y:%d\n", x, y);             
+
     data_to_be_logged.this_is_a_bool = !data_to_be_logged.this_is_a_bool;
     data_to_be_logged.this_is_a_int++;
     if(data_to_be_logged.this_is_a_char == 'R')
@@ -73,8 +74,8 @@ int RelbotRT::run()
     monitor.printf("Encoder 4 value : %d\n",sample_data.channel4);
 
     // Set motor outputs to 25% of max
-    actuate_data.pwm1 = 2047 * 0.25;
-    actuate_data.pwm1 = 2047 * -0.25;
+    actuate_data.pwm1 = 2047 * -0.25; // positive = going back.
+    actuate_data.pwm2 = 2047 * 0.25; // positive = going forward.
     return 0;
 }
 
@@ -84,7 +85,8 @@ int RelbotRT::stopping()
     // Return 1 to go to stopped state
     logger.stop();                                // Stop logger
     evl_printf("Hello from stopping\n");          // Do something
-
+    actuate_data.pwm1 = 0; // positive = going back.
+    actuate_data.pwm2 = 0; // positive = going forward.
     return 1;
 }
 
@@ -92,9 +94,9 @@ int RelbotRT::stopped()
 {
     // A steady state in which the system can be deactivated whitout harming the physical system
     // Call reset command to go to the initialising state
-
     monitor.printf("Hello from stopped\n");          // Do something
-
+    actuate_data.pwm1 = 0; // positive = going back.
+    actuate_data.pwm2 = 0; // positive = going forward.
     return 0;
 }
 
@@ -103,14 +105,17 @@ int RelbotRT::pausing()
     // Bring the physical system to a stop as fast as possible without causing harm to the physical system
 
     evl_printf("Hello from pausing\n");           // Do something
+    actuate_data.pwm1 = 0; // positive = going back.
+    actuate_data.pwm2 = 0; // positive = going forward.
     return 1 ;
 }
 
 int RelbotRT::paused()
 {
     // Keep the physical system in the current physical state
-
     monitor.printf("Hello from paused\n");            // Do something
+    actuate_data.pwm1 = 0; // positive = going back.
+    actuate_data.pwm2 = 0; // positive = going forward.
     return 0;
 }
 
@@ -118,8 +123,8 @@ int RelbotRT::error()
 {
     // Error detected in the system 
     // Can go to error if the previous state returns 1 from every other state function but initialising 
-
     monitor.printf("Hello from error\n");             // Do something
-
+    actuate_data.pwm1 = 0; // positive = going back.
+    actuate_data.pwm2 = 0; // positive = going forward.
     return 0;
 }
