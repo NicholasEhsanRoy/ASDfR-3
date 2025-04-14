@@ -35,6 +35,7 @@
 #else
     #error "Required cv_bridge header file not found"
 #endif
+
 // Self written headers
 #include "Plant.h"
 

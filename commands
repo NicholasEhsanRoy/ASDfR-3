@@ -102,3 +102,14 @@ ros2 run object_identifier object_identifier_node --ros-args --params-file src/o
 ros2 run relbot_simulator relbot_simulator  --ros-args -p use_twist_cmd:=true
 
 ros2 run test_node test_node_exec 
+
+
+
+## Controller is the executable
+sudo ./build/controller/controller
+
+## To start the Ros-Xeno bridge
+ros2 run ros_xeno_bridge RosXenoBridge 
+
+## To start the loop:
+ros2 topic pub --once /Command std_msgs/msg/Int32 "{data: 1}"

@@ -1,0 +1,19 @@
+/colour_segmenter:
+  ros__parameters:
+    history: "keep_last"
+    durability: "volatile"
+    reliability: "reliable"
+    depth: 1
+    publish_mode: "continuous"
+    colour_name: "green"
+    show_camera: false
+    brightness_threshold: 60
+    lower_hue: 27
+    upper_hue: 95
+    lower_saturation: 60
+    upper_saturation: 255
+    lower_value: 60
+    upper_value: 255
+    image_source_topic: "/output/moving_camera"
+
+
