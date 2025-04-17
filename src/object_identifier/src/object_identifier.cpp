@@ -54,7 +54,12 @@ namespace object_identifier {
 
     void ObjectIdentifier::initialize() {
         auto qos = rclcpp::QoS(depth_);
-        history_ == "keep_all" ? qos.keep_all() : qos.keep_last(depth_);
+        if (history_ == "keep_all") {
+            qos.keep_all();
+        } else {
+            qos.keep_last(depth_);
+        }
+
 
         pub_ = this->create_publisher<asdfr_msgs::msg::IdentifiedObject>("object_position", qos);
         auto image_callback = [this](sensor_msgs::msg::Image::ConstSharedPtr msg) -> void {
