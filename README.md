@@ -12,4 +12,6 @@
 chmod +x start_script.sh
 ```
 Run the script
+```bash
 sudo ./start_script.sh
+```
