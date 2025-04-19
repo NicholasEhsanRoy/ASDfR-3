@@ -1,3 +1,2 @@
-int32 x
-int32 y
-float32 r
+float64 v
+float64 w

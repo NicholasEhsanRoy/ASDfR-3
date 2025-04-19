@@ -3,10 +3,10 @@
  *
  *  file:  LoopController.cpp
  *  subm:  LoopController
- *  model: RELbotSimple
- *  expmt: RELbotSimple
+ *  model: LoopController
+ *  expmt: 20-1CBF
  *  date:  April 14, 2025
- *  time:  5:24:05 AM
+ *  time:  9:56:22 PM
  *  user:  Vakgroep RaM
  *  from:  -
  *  build: 5.1.4.13773
@@ -22,7 +22,9 @@
 
 /* 20-sim include files */
 #include "LoopController.h"
-
+#include "pid_config.hpp"
+#include <cstdlib>    // for getenv
+#include <iostream>
 /* Delta margin used for end time checking */
 const XXDouble c_delta = 1.0e-7;
 
@@ -91,8 +93,42 @@ void LoopController::Reset(XXDouble starttime)
 	memset(m_U, 0, (0 + 1) * sizeof(XXDouble));
 	memset(m_workarray, 0, (0 + 1) * sizeof(XXDouble));
 
+	default_kp_left = 644.0;		/* PID_Left\Kp {} */
+	default_kd_left = 0.5;		/* PID_Left\Kd {} */
+	default_ki_left = 3.9;		/* PID_Left\Ki {} */
+	default_kp_right = 644.0;		/* PID_Right\Kp {} */
+	default_kd_right = 0.5;		/* PID_Right\Kd {} */
+	default_ki_right = 3.9;		/* PID_Right\Ki {} */
+	
+	const char* config_path_env = std::getenv("ASDFR_01_PID_CONFIG_PATH");
+	
+	if (!config_path_env) {
+		state = initialrun;
+		return;
+    }
+	
+	std::string config_path(config_path_env);
+	ConfigLoader loader;
+
+	if (!loader.load(config_path)) {
+		state = initialrun;
+		return;
+    }
+	const auto& configs = loader.get_configs();
+	if(configs.size() != 2){
+		state = initialrun;
+		return;
+	}
+
+	default_kp_left = configs[0].kp;
+	default_ki_left = configs[0].ki;
+	default_kd_left = configs[0].kd;
+	default_kp_right = configs[1].kp;
+	default_ki_right = configs[1].ki;
+	default_kd_right = configs[1].kd;
 
 	state = initialrun;
+	return;
 }
 
 bool LoopController::IsFinished(void)
@@ -123,14 +159,14 @@ void LoopController::Initialize (XXDouble *u, XXDouble *y, XXDouble t)
 
 	/* set the constants */
 
-
 	/* set the parameters */
-	m_P[0] = 644.0;		/* PID_Left\Kp {} */
-	m_P[1] = 0.5;		/* PID_Left\Kd {} */
-	m_P[2] = 3.9;		/* PID_Left\Ki {} */
-	m_P[3] = 644.0;		/* PID_Right\Kp {} */
-	m_P[4] = 0.5;		/* PID_Right\Kd {} */
-	m_P[5] = 3.9;		/* PID_Right\Ki {} */
+	m_P[0] = default_kp_left;		/* PID_Left\Kp {} */
+	m_P[1] = default_kd_left;		/* PID_Left\Kd {} */
+	m_P[2] = default_ki_left;		/* PID_Left\Ki {} */
+
+	m_P[3] = default_kp_right;		/* PID_Right\Kp {} */
+	m_P[4] = default_kd_right;		/* PID_Right\Kd {} */
+	m_P[5] = default_ki_right;		/* PID_Right\Ki {} */
 
 
 	/* set the initial values */

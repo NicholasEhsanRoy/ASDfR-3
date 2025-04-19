@@ -8,8 +8,8 @@ Input:
         Image recieved with black and white colors.
 Output:
 /object_position 
-        Type: geometry_msgs/msg/Point
-        x,y points where the center of mass is calculated, the z coordinates contain the image dimensions
+        Type: asdfr_msgs/msg/IdentifiedObject
+        Object to follow
 Run:
         In a terminal run the following commands:
         ros2 run object_identifier object_identifier_node --ros-args --params-file src/object_identifier/config/object_identifier.yml
@@ -17,5 +17,3 @@ Run:
 Parameters:
         bool test_mode: if true, the node runs a sequence of set positions for 25 seconds, if false, the node requires coordinates to send set positions to relbot
 
-Note:
-    Make sure to run RELBOT in twist mode.

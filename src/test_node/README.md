@@ -1,21 +1,19 @@
-Package object_identifier
+Package test_node
 -----------------------------------------------
-Description:This package recieves an black and white image, and publishes the center of mass of the white object, or (-1,-1) if none.
+Description:This package sends a seriese of twist setpoints that follow a straight line and then a 90 degree angle, once every 33 millisec.
 
 Input:
-/bw_image 
-        Type: sensor_msgs/msg/Image
-        Image recieved with black and white colors.
+
 Output:
-/object_position 
-        Type: geometry_msgs/msg/Point
-        x,y points where the center of mass is calculated, the z coordinates contain the image dimensions
+/Ros2Xeno 
+        Type: XRF2_msgs/msg/Ros2Xeno
+        v, w twist velocity
 Run:
         In a terminal run the following commands:
-        ros2 run object_identifier object_identifier_node --ros-args --params-file src/object_identifier/config/object_identifier.yml
+        ros2 run test_node test_node_exec --ros-args --params-file src/test_node/config/test_node.yml
 
 Parameters:
-        bool test_mode: if true, the node runs a sequence of set positions for 25 seconds, if false, the node requires coordinates to send set positions to relbot
+        float linear_velocity: The velocity during the straight line portion of the test
 
 Note:
     Make sure to run RELBOT in twist mode.

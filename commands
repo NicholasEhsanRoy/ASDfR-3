@@ -92,28 +92,43 @@ ssh -X ubuntu@10.77.1.166
 cd ~/ASDFR/ASDfR-3
 source install/setup.bash
 
-ros2 run cam2image_vm2ros cam2image --ros-args --params-file src/cam2image_vm2ros/config/cam2image_relbot.yaml
+#connect
+ssh -X asdfr-01@10.28.0.111
+
+# if you want a simulator:
 ros2 run cam2image_vm2ros cam2image --ros-args --params-file src/cam2image_vm2ros/config/cam2image.yaml
-
-ros2 run colour_segmenter colour_segment --ros-args --params-file src/colour_segmenter/config/colour_segmenter.yml
-
-ros2 run object_identifier object_identifier_node --ros-args --params-file src/object_identifier/config/object_identifier.yml
-
 ros2 run relbot_simulator relbot_simulator  --ros-args -p use_twist_cmd:=true
 
-ros2 run test_node test_node_exec 
+## to set the pid config file
+export ASDFR_01_PID_CONFIG_PATH=./pid_confg.csv
 
-## to build messages
-colcon build --packages-select xrf2_msgs
+# to run the application:
+# 1
+ros2 run cam2image_vm2ros cam2image --ros-args --params-file src/cam2image_vm2ros/config/cam2image_relbot.yaml
 
-## To start the Ros-Xeno bridge
-ros2 run ros_xeno_bridge RosXenoBridge 
+# 2
+ros2 run colour_segmenter colour_segment --ros-args --params-file src/colour_segmenter/config/colour_segmenter.yml
 
-## To start the loop:
-ros2 topic pub --once /Command std_msgs/msg/Int32 "{data: 1}"
+# 3
+ros2 run object_identifier object_identifier_node --ros-args --params-file src/object_identifier/config/object_identifier.yml
 
-## relbot_rt is the executable
+# 4 run test node or object follower
+ros2 run test_node test_node_exec --ros-args --params-file  src/object_follower/config/test_node.yml
+#or
+ros2 run object_follower object_follower_exec --ros-args --params-file src/object_follower/config/object_follower.yml
+
+# 5 
 sudo ./build/RelbotRT/relbot_rt
 
-## to rebuild the executable
-colcon build --packages-select RelbotRT
+# 6
+ros2 run ros_xeno_bridge RosXenoBridge 
+
+# 7 start the follower
+ros2 topic pub --once /Command std_msgs/msg/Int32 "{data: 1}"
+
+## to build messages
+colcon build --packages-select xrf2_msgs asdfr_messages
+
+
+
+ros2 topic pub --once /Ros2Xeno xrf2_msgs/msg/ros_2xeno "{v: 0.0, w: 0.0}"

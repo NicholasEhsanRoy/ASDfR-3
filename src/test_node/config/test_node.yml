@@ -1,1 +1,4 @@
 /test_node:
+  ros__parameters:
+    linear_velocity: 0.1
+

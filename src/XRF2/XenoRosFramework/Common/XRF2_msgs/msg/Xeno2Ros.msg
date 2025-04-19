@@ -1,2 +1,1 @@
-float64 example_c
-float64 example_d
+int32 state

@@ -23,11 +23,13 @@
     #error "Required cv_bridge header file not found"
 #endif
 #include "asdfr_msgs/msg/identified_object.hpp"
-#include "geometry_msgs/msg/twist.hpp"
+#include "xrf2_msgs/msg/ros2_xeno.hpp"
+
 #include <vector>
 #include <iostream>
 #include <array>
 #include <cmath>
+#include <chrono>
 
 namespace test_node {
     class TestNode : public rclcpp::Node {
@@ -36,17 +38,16 @@ namespace test_node {
         private:
         void parse_parameters();
         void initialize();
-        rclcpp::Subscription<asdfr_msgs::msg::IdentifiedObject>::SharedPtr sub_;
-        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_;  
+        rclcpp::Publisher<xrf2_msgs::msg::Ros2Xeno>::SharedPtr pub_;  
         void publish_twist_message(double x, double z);
-        void object_callback(const asdfr_msgs::msg::IdentifiedObject::SharedPtr msg) ;
-        std::vector<float> desired_destination;
-        std::vector<float> destination_error;
-        std::vector<float> twist_vector;
-        std::vector<std::vector<float>> weights;
-        void computeTwistVector(const std::vector<std::vector<float>>& weights,
-                        const std::vector<float>& error_vector,
-                        std::vector<float>& twist_vector);
+        rclcpp::TimerBase::SharedPtr timer_;
+        void timer_callback();
+        static constexpr size_t sequence_size = 200;  // Adjust as needed
+        std::array<double, sequence_size> v_seq_;
+        std::array<double, sequence_size> w_seq_;
+        size_t step_ = 0;
+        void generate_velocity_sequence();
+        double linear_v_;
     };
 } 
 

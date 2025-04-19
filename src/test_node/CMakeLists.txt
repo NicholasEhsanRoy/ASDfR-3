@@ -18,6 +18,9 @@ find_package(std_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(OpenCV REQUIRED COMPONENTS core highgui imgcodecs imgproc videoio)
 find_package(asdfr_msgs REQUIRED)
+find_package(xrf2_msgs REQUIRED)
+
+
  
 add_library(${PROJECT_NAME} SHARED
     src/test_node.cpp
@@ -37,6 +40,7 @@ ament_target_dependencies(${PROJECT_NAME}
   std_msgs
   cv_bridge
   asdfr_msgs
+  xrf2_msgs
 )
 target_link_libraries(${PROJECT_NAME}
   ${OpenCV_LIBS}

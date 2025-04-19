@@ -16,9 +16,9 @@ volatile bool exitBool = false;
 
 static void *XenoThread(void *arg)
 {
-    RelbotRT example_rt(1000,1,1);
-    evl_printf("starting the loop!!!\n");
-    example_rt.loop();
+    RelbotRT relbot_controller(1,1);
+    evl_printf("starting the loop\n");
+    relbot_controller.loop();
     return NULL;
 }
 
