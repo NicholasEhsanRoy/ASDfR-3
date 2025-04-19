@@ -10,3 +10,6 @@
 
 ```bash
 chmod +x start_script.sh
+```
+Run the script
+sudo ./start_script.sh
