@@ -14,6 +14,6 @@
     upper_saturation: 255
     lower_value: 60
     upper_value: 255
-    image_source_topic: "/output/moving_camera"
+    image_source_topic: "image"
 
 

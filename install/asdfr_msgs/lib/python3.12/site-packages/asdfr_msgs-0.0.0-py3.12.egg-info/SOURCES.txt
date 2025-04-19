@@ -1,8 +1,0 @@
-setup.py
-asdfr_msgs/__init__.py
-asdfr_msgs.egg-info/PKG-INFO
-asdfr_msgs.egg-info/SOURCES.txt
-asdfr_msgs.egg-info/dependency_links.txt
-asdfr_msgs.egg-info/top_level.txt
-asdfr_msgs/msg/__init__.py
-asdfr_msgs/msg/_identified_object.py

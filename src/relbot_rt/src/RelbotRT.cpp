@@ -1,130 +1,157 @@
 #include "RelbotRT.hpp"
+ /*
+            State           Value
+            Idle            1
+            Initialising    2
+            Initialised     3 // when initailized, start running.
+            Run             4
+            Stopping        5
+            Stopped         6
+            Pausing         7
+            Paused          8
+            Error           9
+            Quit            10
 
-RelbotRT::RelbotRT(uint cycle_time_freq, uint write_decimator_freq, uint monitor_freq) :
-    XenoFrtRosIco(cycle_time_freq, write_decimator_freq, monitor_freq, file, &data_to_be_logged),
-    file(1,"/temp/relbotrt","bin")
+        */
+
+RelbotRT::RelbotRT(uint write_decimator_freq, uint monitor_freq) :
+XenoFrt20Sim(write_decimator_freq, monitor_freq, file, &data_to_be_logged),
+    file(1,"/temp/relbotrt","bin"),
+    left_encoder(),
+    right_encoder() 
 {
-     printf("%s: Constructing rampio\n", __FUNCTION__);
-    // Add variables to logger to be logged, has to be done before you can log data
-    logger.addVariable("this_is_a_int", integer);
-    logger.addVariable("this_is_a_double", double_);
-    logger.addVariable("this_is_a_float", float_);
-    logger.addVariable("this_is_a_char", character);
-    logger.addVariable("this_is_a_bool", boolean);
-    // The logger has to be initialised at only once
-    if(!logger.isInitialised())
+    printf("%s: Constructing rampio\n", __FUNCTION__);
+    if(!logger.isInitialised()){
         logger.initialise();
+    }
+    controller = new LoopController();
+    controller->SetFinishTime(0.0);
+    xeno_data.state = 1;
 }
 
 RelbotRT::~RelbotRT()
 {
-    
+    delete controller;
 }
 
 int RelbotRT::initialising()
 {
-    // Set physical and cyber system up for use
-    // Return 1 to go to initialised state
-
-    evl_printf("Hello from initialising\n");      // Do something
-
-    // The FPGA has to be initialised at least once
+    evl_printf("initialising\n");
     ico_io.init();
-
+    xeno_data.state = 2;
     return 1;
 }
 
 int RelbotRT::initialised()
 {
-    // Keep the physical syste in a state to be used in the run state
-    // Call start() or return 1 to go to run state
-
-    monitor.printf("Hello from initialised\n");       // Do something
-
+    monitor.printf("initialised\n");
+    xeno_data.state = 3;
     return 1;
 }
 
 int RelbotRT::run()
 {
-    // Do what you need to do
-    // Return 1 to go to stopping state
-
-    // Start logger
+    xeno_data.state = 4;
     if(!logger.isStarted())
         logger.start();                             
-    int32_t x = ros_data.x;
-    int32_t y = ros_data.y;
-    monitor.printf("Data: X:%d, Y:%d\n", x, y);             
+    float v_ = ros_data.v;
+    float w_ = ros_data.w;
+    monitor.printf("Data: V:%.3f, w:%.3f\n", v, w);
 
-    data_to_be_logged.this_is_a_bool = !data_to_be_logged.this_is_a_bool;
-    data_to_be_logged.this_is_a_int++;
-    if(data_to_be_logged.this_is_a_char == 'R')
-        data_to_be_logged.this_is_a_char = 'A';
-    else if (data_to_be_logged.this_is_a_char == 'A')
-        data_to_be_logged.this_is_a_char = 'M';
-    else
-        data_to_be_logged.this_is_a_char = 'R';
-    data_to_be_logged.this_is_a_float = data_to_be_logged.this_is_a_float/2;
-    data_to_be_logged.this_is_a_double = data_to_be_logged.this_is_a_double/4; 
+    // ros outputs a twist v, w. This needs to be converted to v left and right.
+    double s_ = RelbotRT::calculate_velocity_steering(w_);
+    double d_ = RelbotRT::calculate_velocity_drive(v_);
+    double set_v_left = RelbotRT::calculate_motor_velocity_left(d_, s_);
+    double set_v_right = RelbotRT::calculate_motor_velocity_right(d_, s_);
 
-    // Printf encoder 1 to 4 data
-    monitor.printf("Encoder 1 value : %d\n",sample_data.channel1);
-    monitor.printf("Encoder 2 value : %d\n",sample_data.channel2);
-    monitor.printf("Encoder 3 value : %d\n",sample_data.channel3);
-    monitor.printf("Encoder 4 value : %d\n",sample_data.channel4);
+    updateSoftEncoders(); // accounts for the opposite direction of both wheels.
+    double left_position = left_encoder.get_angle_radians();
+    double right_position = right_encoder.get_angle_radians();
 
-    // Set motor outputs to 25% of max
-    actuate_data.pwm1 = 2047 * -0.25; // positive = going back.
-    actuate_data.pwm2 = 2047 * 0.25; // positive = going forward.
+    inputs[0] = left_position;
+    inputs[1] = right_position;
+    inputs[2] = set_v_left;
+    inputs[3] = set_v_right;
+
+    controller->Calculate(inputs, outputs);
+    actuate_data.pwm1 = 2047 * (outputs[0]);    // positive = going back.
+    actuate_data.pwm2 = 2047 * (outputs[1]);     // positive = going forward.
     return 0;
 }
 
 int RelbotRT::stopping()
 {
-    // Bring the physical system to a stop and set it in a state that the system can be deactivated
-    // Return 1 to go to stopped state
-    logger.stop();                                // Stop logger
-    evl_printf("Hello from stopping\n");          // Do something
-    actuate_data.pwm1 = 0; // positive = going back.
-    actuate_data.pwm2 = 0; // positive = going forward.
+    xeno_data.state = 5;
+    evl_printf("stopping\n");
+    logger.stop();
+    RelbotRT::stop_motors();
     return 1;
 }
 
 int RelbotRT::stopped()
 {
-    // A steady state in which the system can be deactivated whitout harming the physical system
-    // Call reset command to go to the initialising state
-    monitor.printf("Hello from stopped\n");          // Do something
-    actuate_data.pwm1 = 0; // positive = going back.
-    actuate_data.pwm2 = 0; // positive = going forward.
+    xeno_data.state = 6;
+    monitor.printf("stopped\n");
     return 0;
 }
 
 int RelbotRT::pausing()
 {
-    // Bring the physical system to a stop as fast as possible without causing harm to the physical system
-
-    evl_printf("Hello from pausing\n");           // Do something
-    actuate_data.pwm1 = 0; // positive = going back.
-    actuate_data.pwm2 = 0; // positive = going forward.
+    xeno_data.state = 7;
+    evl_printf("pausing\n");
+    RelbotRT::stop_motors();
     return 1 ;
 }
 
 int RelbotRT::paused()
 {
-    // Keep the physical system in the current physical state
-    monitor.printf("Hello from paused\n");            // Do something
-    actuate_data.pwm1 = 0; // positive = going back.
-    actuate_data.pwm2 = 0; // positive = going forward.
+    xeno_data.state = 8;
+    monitor.printf("paused\n");
     return 0;
 }
 
 int RelbotRT::error()
 {
-    // Error detected in the system 
-    // Can go to error if the previous state returns 1 from every other state function but initialising 
-    monitor.printf("Hello from error\n");             // Do something
+    xeno_data.state = 9;
+    monitor.printf("error\n");
+    RelbotRT::stop_motors();
+    return 0;
+}
+
+void RelbotRT::updateSoftEncoders() {
+    // Update the left and right encoders using the data from the channels
+    // the soft encoder class accounts for the non-zero initial encoder value by subtracting the inital value from all the samples.
+    left_encoder.update_from_hard_encoder(sample_data.channel1);
+    right_encoder.update_from_hard_encoder(16383 - sample_data.channel2); // unify the direction of both wheels.
+}
+
+double RelbotRT::calculate_velocity_steering( double angular_v){
+    // angular velocity multiplied by distance between 2 wheels, divided by 2* the wheel radius or just the wheel diameter in meter.
+    // the distance is roughly less than 2 wheels. I used pixels on the wheel diameter to estimate on 2 seperate images.
+    return ((angular_v * 0.174) / (2 * 0.101));
+}
+
+double RelbotRT::calculate_velocity_drive(double linear_v){
+    // The linear velocity in meter per sec divided by the wheel radius in meters.
+    return (linear_v / 0.0505);
+}
+
+double RelbotRT::calculate_motor_velocity_left(double drive, double steering) {
+    // retuns setpoints left
+    return drive - steering;
+}
+
+double RelbotRT::calculate_motor_velocity_right(double drive, double steering) {
+    // returns set points right
+    return drive + steering;
+}
+
+void RelbotRT::stop_motors(){
+    inputs[0] = 0;
+    inputs[1] = 0;
+    inputs[2] = 0;
+    inputs[3] = 0;
+    // manually set everything to 0, bypassing the controller in case of an error.
     actuate_data.pwm1 = 0; // positive = going back.
     actuate_data.pwm2 = 0; // positive = going forward.
-    return 0;
 }

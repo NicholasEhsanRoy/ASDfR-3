@@ -1,0 +1,5 @@
+/object_follower:
+  ros__parameters:
+    linear_scalef: 0.01
+    angular_scalef: 0.01
+    follower_threshold: 50.0

@@ -3,10 +3,10 @@
  *
  *  file:  LoopController.h
  *  subm:  LoopController
- *  model: RELbotSimple
- *  expmt: RELbotSimple
+ *  model: LoopController
+ *  expmt: 20-1CBF
  *  date:  April 14, 2025
- *  time:  5:24:05 AM
+ *  time:  9:56:22 PM
  *  user:  Vakgroep RaM
  *  from:  -
  *  build: 5.1.4.13773
@@ -94,7 +94,8 @@ class LoopController: virtual public Submodel20sim
 
 	private:
 		/* internal submodel computation methods */
-
+		double default_kp_left, default_ki_left,default_kd_left;
+		double default_kp_right, default_ki_right,default_kd_right;
 		/**
 		 * CalculateInitial()
 		 * This function calculates the initial equations of the model.

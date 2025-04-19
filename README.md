@@ -3,3 +3,10 @@
 ## Group 1
 ## Belal Elshinnawey
 ## Nicholas Roy
+
+## How to Use
+
+### 1. Make the script executable
+
+```bash
+chmod +x start_script.sh
